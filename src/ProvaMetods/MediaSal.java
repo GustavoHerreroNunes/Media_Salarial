@@ -1,4 +1,4 @@
-/* Este programa tem como finalidade informar a mÈdia salarial dos funcionarios de uma empresa
+/* Este programa tem como finalidade informar a m√©dia salarial dos funcionarios de uma empresa
  * e informando se esta acima ou abaixo do previsto pela empresa
  */
 package ProvaMetods;
@@ -7,18 +7,18 @@ import javax.swing.JOptionPane;
 
 public class MediaSal {
 	
-	static float FunSal(int A) {//MÈtodo que recebe os sal·rios dos funcionarios informados
+	static float FunSal(int A) {//M√©todo que recebe os sal√°rios dos funcionarios informados
 		float Sal[] = new float[A], SalT =0;
 		
 		for(int P =0; P<A; P++) {
-		Sal[P] = Float.parseFloat(JOptionPane.showInputDialog(null, "Inisira o  salario do " + (P+1) + "∫ funcion·rio", "MultiGeyser", 3));
+		Sal[P] = Float.parseFloat(JOptionPane.showInputDialog(null, "Inisira o  salario do " + (P+1) + "¬∫ funcion√°rio", "MultiGeyser", 3));
 		
-		SalT = SalT + Sal[P];//C·culo da soma de todos salarios, feito a cada loop
+		SalT = SalT + Sal[P];//C√°culo da soma de todos salarios, feito a cada loop
 		}
 		
 		return SalT;
 	}
-	static String MediaSalr(float Prev, float SalT, int Funcs) {//MÈtodo que c·cula a mÈdia slarial e verifica se esta acima ou abaixo da mÈdia prevista
+	static String MediaSalr(float Prev, float SalT, int Funcs) {//M√©todo que c√°cula a m√©dia salarial e verifica se esta acima ou abaixo da m√©dia prevista
 		String Final="", PrevD ="";
 		float Md =0, SubMd =0;
 		
@@ -32,7 +32,7 @@ public class MediaSal {
 			PrevD = " Abaixo";
 		}
 		
-		Final = "MÈdia sal·rial da empresa È de:\nR$:" + Md + "\nR$:" + SubMd + PrevD + " do previsto";
+		Final = "M√©dia sal√°rial da empresa √© de:\nR$:" + Md + "\nR$:" + SubMd + PrevD + " do previsto";
 		return Final;
 	}
 
@@ -41,16 +41,16 @@ public class MediaSal {
 		int Funcs =0;
 		String SaltM ="";
 		
-		Funcs = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantos funcionarios h· na empresa?:", "MultiGeyser", 3));
+		Funcs = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantos funcionarios h√° na empresa?:", "MultiGeyser", 3));
 		
-		Prev = Float.parseFloat(JOptionPane.showInputDialog(null, "Qual È a mÈdia prevista de sal·rio?:", "MultiGeyser", 3));
+		Prev = Float.parseFloat(JOptionPane.showInputDialog(null, "Qual √© a m√©dia prevista de sal√°rio?:", "MultiGeyser", 3));
 		
 		
 		SalF= FunSal(Funcs);
 		
 		SaltM = MediaSalr(Prev, SalF, Funcs);
 		
-		JOptionPane.showMessageDialog(null, SaltM, "MultGeyser", 1);//Informe da mensagem a respeito da mÈdia
+		JOptionPane.showMessageDialog(null, SaltM, "MultGeyser", 1);//Informe da mensagem a respeito da m√©dia
 
 	}
 
